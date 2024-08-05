@@ -29,7 +29,12 @@ const SignUpForm: React.FC = () => {
       <FormProvider {...form}>
         <FormTitle>Sign Up</FormTitle>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <InputField type="email" name="email" placeholder="Email" />
+          <InputField
+            maxLength={200}
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
 
           <PasswordField name="password" />
           <Button loading={isLoading} type="submit" title="Sign Up" />
